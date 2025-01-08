@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: secret-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: secret-app
+  template:
+    metadata:
+      labels:
+        app: secret-app
+    spec:
+      containers:
+      - name: app-container
+        image: onuralpozcan/my_http_server:latest
+        ports:
+        - containerPort: 5000
+        env:
+        - name: ENV_VARIABLE
+          valueFrom:
+            secretKeyRef:
+              name: k8s-secret
+              key: secret-key

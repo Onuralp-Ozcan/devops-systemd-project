@@ -116,13 +116,13 @@ Bu görev yanlış yapılandırılmış bir Kubernetes Deployment dosyasının d
 3. **Sorun Giderme Logları**
 
    - **Hata İnceleme:** `kubectl describe deployment secret-app` komutu kullanılarak hata mesajları incelendi.
-![task4-k8s-describe-pods](/task4-k8s-describe-pods)
+![task4-k8s-describe-pods](/task4-k8s-describe-pods.png)
    - **Güncelleme ve Test:** Düzeltilen yapılandırma yeniden uygulanarak dağıtım doğrulandı.
 
 4. **Doğrulama**
 
    - Tüm pod'ların başarıyla çalıştığı kontrol edildi.
-![task4-rolling-all](/task4-rolling-all)
+![task4-rolling-all](/task4-rolling-all.png)
 
 
 ### **Dosyalar:**
